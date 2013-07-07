@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="AmarinoLibrary.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AmarinoLibExample/build/exploded-bundles/AmarinoLibrary.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AmarinoLibExample/build/exploded-bundles/AmarinoLibrary.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AmarinoLibExample/build/exploded-bundles/AmarinoLibrary.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AmarinoLibExample/build/exploded-bundles/AmarinoLibrary.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

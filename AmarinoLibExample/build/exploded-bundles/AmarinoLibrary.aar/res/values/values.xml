@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#333333</color>
+    <color name="background_event_feedback">#22ffffcc</color>
+    <color name="background_graph">#767643</color>
+    <color name="background_screen">#111</color>
+    <color name="connected_off">#2000ff00</color>
+    <color name="connected_on">#ff00ff00</color>
+    <color name="disconnected_off">#30ff0000</color>
+    <color name="disconnected_on">#ffff0000</color>
+    <color name="light_gray_text">#CCCCCC</color>
+    <color name="light_yellowish_text">#BCBC99</color>
+    <color name="monitoring_btn_text">#999</color>
+
+    <dimen name="button_font_size">12sp</dimen>
+    <dimen name="device_name_size">18sp</dimen>
+
+    <drawable name="list_selector">#40aa40</drawable>
+
+    <string name="about_changelog"><b>Release Notes</b>	\n0.55
+	\n - fixed bug in MessageBuilder. Flags were converted to numbers in some cases.
+	\n0.53
+	\n - fixed bug in Amarino API (in Amarino.java), device address was not sent when using sendDataToArduino() function
+	\n\n0.52
+	\n - added fall back when UUID does not work, it will try to use the good old port 1
+	\n\n0.5
+	\n - uses UUID (instead of always port 1) to determine which port to use when connecting to a Bluetooth module
+	\n - added release notes dialog to show up when a new Amarino version has been installed
+	\n - shows a message when no plug-ins are installed and user tries to add an event</string>
+    <string name="about_msg">Amarino 2.0 - A prototyping platform for Android and Arduino
+	\n\n\u00A9 2010 by Bonifaz Kaufmann
+	\n\nhttp://www.amarino-toolkit.net
+	
+	\n\nThanks to Stefano Sanna and Emanuele Di Saverio, since Amarino uses
+	their Android Bluetooth API which can be found at
+	\nhttp://code.google.com/p/android-bluetooth/</string>
+    <string name="add_bt_device">Add BT Device</string>
+    <string name="add_event">Add Event</string>
+    <string name="app_name">Amarino 2.0</string>
+    <string name="connect">Connect</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting</string>
+    <string name="disable">Disable</string>
+    <string name="disabled">disabled</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="enable">Enable</string>
+    <string name="flag_btn">Flag: %s</string>
+    <string name="force_disable">Force Disable</string>
+    <string name="force_disable_all">Force Disable All</string>
+    <string name="force_enable">Force Enable</string>
+    <string name="hello">Hello World, MainScreen!</string>
+    <string name="menu_about">About</string>
+    <string name="monitoring">Monitoring</string>
+    <string name="monitoring_title">"Monitoring"</string>
+    <string name="no_devices">First you have to add a new Bluetooth device.</string>
+    <string name="no_events">No events selected!</string>
+    <string name="no_plugins_installed">There are no Amarino plug-ins installed on your phone.
+	\n\nInstall the AmarinoPlugInBundle to get some events to start with.</string>
+    <string name="plugin_info_msg">This is a plug-in for Amarino 2.0 and not a standalone application.
+	\n\nYou can add this plug-in to Amarino, by selecting \'Add Event\' within Amarino</string>
+    <string name="remove">Remove</string>
+    <string name="remove_all">Remove All</string>
+    <string name="remove_device">Remove Device</string>
+    <string name="service_active_connections">Active connections: %s</string>
+    <string name="service_address_invalid">Given address [%s] is invalid. Must be of form xx:xx:xx:xx:xx:xx</string>
+    <string name="service_connected_to">Connected to %s</string>
+    <string name="service_connecting_to">Connecting to %s</string>
+    <string name="service_connection_to_failed">Connection failed.</string>
+    <string name="service_disconnected_from">Disconnected from %s</string>
+    <string name="service_lost_from">Connection lost from %s</string>
+    <string name="service_message_to_send">message to send: %s</string>
+    <string name="service_no_active_connections">No active connections</string>
+    <string name="service_notify_text">Amarino is running</string>
+    <string name="service_pairing_request">Pairing request for %s\n\nPull down your status bar to enter the pin.</string>
+    <string name="service_ready_to_shutdown">service ready to shutdown</string>
+    <string name="service_started_title">background service started</string>
+    <string name="settings">Settings</string>
+    <string name="settings_title">"Settings"</string>
+    <string name="show_events">Show Events</string>
+
+    <style name="image_button_with_bottom_text">
+        <item name="android:background">@drawable/btn_background</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+
+</resources>

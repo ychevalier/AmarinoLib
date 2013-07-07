@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AmarinoLib.iml" filepath="$PROJECT_DIR$/AmarinoLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AmarinoLibExample/AmarinoLibExample.iml" filepath="$PROJECT_DIR$/AmarinoLibExample/AmarinoLibExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AmarinoLibrary/AmarinoLibrary.iml" filepath="$PROJECT_DIR$/AmarinoLibrary/AmarinoLibrary.iml" />
+    </modules>
+  </component>
+</project>
+

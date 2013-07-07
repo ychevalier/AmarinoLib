@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/10/trunk/amarino/res/layout
+END
+discovered_devices_list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1/trunk/amarino/res/layout/discovered_devices_list_item.xml
+END
+event_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/trunk/amarino/res/layout/event_entry.xml
+END
+discovered_devices_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1/trunk/amarino/res/layout/discovered_devices_list.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/10/trunk/amarino/res/layout/main.xml
+END
+monitoring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/trunk/amarino/res/layout/monitoring.xml
+END
+about.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/amarino/res/layout/about.xml
+END
+info.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1/trunk/amarino/res/layout/info.xml
+END
+devices_list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1/trunk/amarino/res/layout/devices_list_item.xml
+END
+event_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/trunk/amarino/res/layout/event_list.xml
+END
+plugin_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1/trunk/amarino/res/layout/plugin_entry.xml
+END
