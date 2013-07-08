@@ -447,12 +447,38 @@ public class AmarinoService extends Service {
 					msg = new String(buffer, 0, (bytes != -1) ? bytes : 0);
 					//Log.d(TAG, msg); // raw data with control flags
 
-					forwardDataToOtherApps(msg);
+					forwardData(msg);
 
 				} catch (IOException e) {
 					disconnect(mAddress);
 					Logger.d(TAG, "communication to " + mAddress + " halted");
 					break;
+				}
+			}
+		}
+
+		private void forwardData(String data){
+			char c;
+			for (int i=0;i<data.length();i++){
+				c = data.charAt(i);
+				if (c == MessageBuilder.ARDUINO_MSG_FLAG){
+					// TODO this could be used to determine the data type
+					// if (i+1<data.length()){
+					//	int dataType = data.charAt(i+1);
+					//	i++;
+					// depending on the dataType we could convert the following data appropriately
+					//	}
+					// else {
+					// wait for the next char to be sent
+					// }
+				}
+				else if (c == MessageBuilder.ACK_FLAG){
+					// message complete send the data
+					forwardDataToOtherApps(forwardBuffer.toString());
+					forwardBuffer = new StringBuffer();
+				}
+				else {
+					forwardBuffer.append(c);
 				}
 			}
 		}

@@ -22,4 +22,6 @@ local.properties
 # Gradle builds
 build/
 
+.DS_Store
+
 *.aar
