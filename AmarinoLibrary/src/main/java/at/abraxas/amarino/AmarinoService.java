@@ -59,8 +59,6 @@ public class AmarinoService extends Service {
 	public int onStartCommand(Intent intent, int flags, int startId) {
 
 		if (intent == null) {
-			// here we might restore our state if we got killed by the system
-			// TODO
 			return START_STICKY;
 		}
 
@@ -79,12 +77,12 @@ public class AmarinoService extends Service {
 			return START_NOT_STICKY;
 		}
 
-		// publish the state of devices
+		// scan for bluetooth devices.
 		if (action.equals(AmarinoIntent.ACTION_GET_NEARBY_DEVICES)) {
 			scanForNearbyDevices();
 			return START_NOT_STICKY;
 		}
-		
+
 		/* --- CONNECT and DISCONNECT part --- */
 		String address = intent.getStringExtra(AmarinoIntent.EXTRA_DEVICE_ADDRESS);
 		if (address == null) {
@@ -92,7 +90,7 @@ public class AmarinoService extends Service {
 			return START_NOT_STICKY;
 		}
 
-		// connect and disconnect operations may take some time
+		// connect, disconnect and scan operations may take some time
 		// we don't want to shutdown our service while it does some work
 		mServiceState = BUSY;
 
@@ -144,10 +142,9 @@ public class AmarinoService extends Service {
 		super.onDestroy();
 		Logger.d(TAG, "Background service stopped");
 
-		// we do only stop our service if no mConnections are active, however Android may kill our service without warning
+		// we do only stop our service if no connections are active, however Android may kill our service without warning
 		// clean up in case service gets killed from the system due to low memory condition
 		if (mServiceState == ACTIVE_CONNECTIONS) {
-			// TODO save which mConnections are active for recreating later when service is restarted
 			for (ConnectedThread t : mConnections.values()) {
 				t.cancel();
 			}
@@ -209,6 +206,9 @@ public class AmarinoService extends Service {
 
 	private void scanForNearbyDevices() {
 
+		// We want our service to be busy when scanning, so that it does not shutdown.
+		mServiceState = BUSY;
+
 		final List<String> names = new LinkedList<String>();
 		final List<String> addresses = new LinkedList<String>();
 		final Object lock = new Object();
@@ -239,6 +239,8 @@ public class AmarinoService extends Service {
 						returnIntent.putExtra(AmarinoIntent.EXTRA_DEVICE_ADDRESSES, addresesBis);
 
 						sendBroadcast(returnIntent);
+
+						shutdownServiceIfNecessary();
 					}
 				});
 			}
@@ -369,7 +371,6 @@ public class AmarinoService extends Service {
 					} catch (IOException e1) {
 					}
 				shutdownServiceIfNecessary();
-				return;
 			}
 		}
 
